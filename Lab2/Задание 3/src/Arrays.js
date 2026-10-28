@@ -7,12 +7,7 @@ export function arrayFiltering(data) {
 }
 
 export function arrayPushing(array1, array2) {
-  const result = [];
-  for (let i = 0; i < 5; i++) {
-    result.push(array1[i]);
-    result.push(array2[i]);
-  }
-  return result;
+  return array1.reduce((result, element, i) => (result.push(element, array2[i]), result), []);
 }
 
 
